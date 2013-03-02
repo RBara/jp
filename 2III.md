@@ -1,5 +1,4 @@
-
-
+<b>JEZYKI   PROGRAMOWANIA</b><br><br>
 <b>ZAJECIA 1<br><br>
 Zad 1<br>
 Wyswietl sume, różnice, iloczyn i iloraz dwóch liczb calkowitych.<br></b>
