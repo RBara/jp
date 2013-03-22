@@ -531,3 +531,33 @@ int main(){
 }
 ```
           
+<br>
+<b>Zad 10</b><br>
+<i>/jest to zadanie nr 5 z kartki nr 1/</i><br>
+<b>Oblicz za pomocą pętli for i while sume kwadratow liczb  od 3 do 15 </b><br>
+x - oznacza sume kwadratow<br>
+petla for
+```c
+#include <stdio.h>
+int main(){
+    int i, x=0,;
+    for(i=3; i<=15; i++){
+             x=x+(i*i);  
+           }
+           printf(" %d \n",x);
+          getchar(),getchar();
+}
+```
+petla while
+```c
+#include <stdio.h>
+int main(){
+    int i=3, x=0,;
+    while (i<=15){
+             x=x+(i*i); 
+             i++; 
+           }
+           printf(" %d \n",x);
+          getchar(),getchar();
+}
+``` 
