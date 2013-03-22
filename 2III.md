@@ -630,3 +630,7 @@ int main(){
           return 0;
           }
 ```
+można też tka:
+```c 
+while((c=getchar())!= 'x')
+```
