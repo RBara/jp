@@ -415,8 +415,8 @@ do
 <b>Zad 8</b><br>
 <i>/jest to zadanie nr 3 z kartki nr 1/</i><br>
 <b>wczytaj n liczb i wyswietl ich sume i srednia arytmetyczna</b><br>
-<b> zapis srednia=suma/(double)n;  oznacza, ze od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa</b><br>
-<b>wersja z petla while</b><br>
+ zapis srednia=suma/(double)n;  oznacza, ze od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa<br>
+wersja z petla while<br>
 ```c
 #include <stdio.h>
 int main(){
@@ -440,7 +440,7 @@ int main(){
           getchar(),getchar();
 }
 ```
-<b>wersja druga z petla do-while</b><br>
+wersja druga z petla do-while<br>
 ```c
 #include <stdio.h>
 int main(){
