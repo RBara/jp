@@ -447,8 +447,8 @@ int main(){
     int i, n;
     double srednia, suma=0.0, x ;
 ```
-petla do-while
-jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i++
+<i>petla do-while
+jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i++</i>
 ```c
     do{
     printf("podaj ilosc liczb n");
@@ -456,7 +456,7 @@ jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i
 }
     while (n<1);
 ```
-  petla for   
+<i>petla for </i>  
 ```c
     for(i=1; i<=n; i++){
           printf("podaj %d liczbe:",i);
