@@ -610,3 +610,4 @@ int main(){
           getchar(),getchar();
           }
 ```
+zeby zadzialalo mozna np. zmniejszyc zakres i do 126
