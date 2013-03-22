@@ -630,7 +630,26 @@ int main(){
           return 0;
           }
 ```
-można też tka:
+można też tak:
 ```c 
 while((c=getchar())!= 'x')
+```
+
+<br>
+<b>Zad 12</b><br>
+<i>/jest to zadanie nr 7 z kartki nr 1/</i><br>
+<b>Napisz program wyświetlający tabliczkę mnożenia do 13 - użyj pętli</b><br>
+} putchar('\n'); - to oznacza żeby po wykonaniu pętli zagnieżdżonej pszeszedł do następnej linijki<br>
+pętla for wewnątrz pętli for daje mnożenie wierszami i przeskok o jeden wiersz
+```c
+#include <stdio.h>
+int main(){
+    int i,n;
+    for(i=1; i<=13; i++){ 
+             for(n=1; n<=13; n++){
+             printf("%4d",i*n);
+             } putchar('\n');
+             }
+          getchar(),getchar();
+}
 ```
