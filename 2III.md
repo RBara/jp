@@ -469,3 +469,65 @@ jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i
           getchar(),getchar();
 }
 ```
+<br>
+<b>Zad 9</b><br>
+<i>/jest to zadanie nr 4 z kartki nr 1/</i><br>
+<b>wypisz kwadraty i szesciany liczb naturalnych od 1 do n </b><br>
+ petla for<br>
+```c
+#include <stdio.h>
+int main(){
+    int i, n;
+    do{
+    printf("podaj liczbe n: ");
+    scanf("%d",&n);
+}
+    while (n<1);
+    
+    for(i=1; i<=n; i++){
+          printf("liczba \t %d \t kwadrat \t %d \t szescian \t %d \n",i,
+          i*i, i*i*i );
+          }
+          getchar(),getchar();
+}
+```
+
+<i>wersja z petla do-while </i>
+```c
+#include <stdio.h>
+int main(){
+    int i=1, n;
+    do{
+    printf("podaj liczbe n: ");
+    scanf("%d",&n);
+}
+    while (n<1);
+    do{
+    printf("liczba \t %d \t kwadrat \t %d \t szescian \t %d \n",i,
+          i*i, i*i*i );
+          i++;
+          }          
+    while (i<=n);
+          getchar(),getchar();
+}
+```
+   
+ <i>wersja z petla while </i>  
+```c
+#include <stdio.h>
+int main(){
+    int i=1, n;
+    do{
+    printf("podaj liczbe n: ");
+    scanf("%d",&n);
+}
+    while (n<1);
+    while (i<=n){
+    printf("liczba \t %d \t kwadrat \t %d \t szescian \t %d \n",i,
+          i*i, i*i*i );
+          i++;
+          }          
+          getchar(),getchar();
+}
+```
+          
