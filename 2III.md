@@ -416,6 +416,7 @@ do
 <i>/jest to zadanie nr 3 z kartki nr 1/</i><br>
 <b>wczytaj n liczb i wyswietl ich sume i srednia arytmetyczna</b><br>
 <b> zapis srednia=suma/(double)n;  oznacza, ze od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa</b><br>
+<b>wersja z petla while</b><br>
 ```c
 #include <stdio.h>
 int main(){
@@ -436,6 +437,28 @@ int main(){
           srednia=suma/(double)n;
           puts("srednia");
           printf("%.2lf\n", srednia);
+          getchar(),getchar();
+}
+```
+<b>wersja druga z petla do-while</b><br>
+```c
+#include <stdio.h>
+int main(){
+    int i, n;
+    double srednia, suma=0.0, x ;
+    do{
+    printf("podaj ilosc liczb n");
+    scanf("%d",&n);
+}
+    while (n<1);
+    for(i=1; i<=n; i++){
+          printf("podaj %d liczbe:",i);
+          scanf("%lf",&x);
+          suma=suma+x;
+          }
+          srednia=suma/n;
+          printf("suma podanych %d liczb wynosi: %.3lf",n, suma);
+          printf("srednia wynosi: %.3lf",srednia);
           getchar(),getchar();
 }
 ```
