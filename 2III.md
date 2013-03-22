@@ -411,3 +411,31 @@ do
  return 0;
 } 
 ```
+<br>
+<b>Zad 8</b><br>
+<i>/jest to zadanie nr 3 z kartki nr 1/</i><br>
+<b>wczytaj n liczb i wyswietl ich sume i srednia arytmetyczna</b><br>
+<b> zapis srednia=suma/(double)n;  oznacza, ze od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa</b><br>
+```c
+#include <stdio.h>
+int main(){
+    int i, n , suma, x;
+    double srednia;
+    suma=0;
+    i=0;
+    puts("podaj ilosc liczb n");
+    scanf("%d",&n);
+    while (i<n){
+          printf("podaj liczbe");
+          scanf("%d",&x);
+          i++;
+          suma=suma+x;
+          }
+          puts("suma");
+          printf("%d\n", suma);
+          srednia=suma/(double)n;
+          puts("srednia");
+          printf("%.2lf\n", srednia);
+          getchar(),getchar();
+}
+```
