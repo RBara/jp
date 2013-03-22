@@ -561,3 +561,20 @@ int main(){
           getchar(),getchar();
 }
 ``` 
+
+<br>
+<b>Zad 11</b><br>
+<i>/jest to zadanie nr 6 z kartki nr 1/</i><br>
+<b>Wypisz sin i cos katow 0-180 stopni z krokiem co 30 stopni za pomoca petli for </b><br>
+```c
+#include <stdio.h>
+#include <math.h>
+int main(){
+    double  i, x=0;
+    for(i=0; i<=180; i=i+30){
+             x=(i/180)*M_PI;
+              printf(" kat %4.0lf stopni \t  sin %5.2lf  \t cos %5.2lf\n ", i, sin(x), cos(x) ); 
+           }  
+          getchar(),getchar();
+          }
+```
