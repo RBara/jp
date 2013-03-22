@@ -578,3 +578,24 @@ int main(){
           getchar(),getchar();
           }
 ```
+<br>
+<b>Zad 12</b><br>
+<i>/jest to zadanie nr 7 z kartki nr 1/</i><br>
+<b>Wypisz znaki od 'a' do 'k' wraz z ich kodem ASCII dziesietnie dec i szesnastkowo hex w kolejnosci rosnacej i malejacej</b><br>
+char - znak
+%c - znak
+%d - kod ASCII dec
+%x - kod ASCII hex
+rosnaco
+
+```c
+#include <stdio.h>
+int main(){
+    char i;
+    for(i='a'; i<='k'; i++){
+              printf(" %c w ASCII w dec to: %3.0d w hex to: %3.0x \n", i,i,i); 
+           }  
+          getchar(),getchar();
+          }
+
+```
