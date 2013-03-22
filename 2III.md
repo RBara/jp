@@ -446,11 +446,18 @@ wersja druga z petla do-while<br>
 int main(){
     int i, n;
     double srednia, suma=0.0, x ;
+```
+petla do-while
+jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i++
+```c
     do{
     printf("podaj ilosc liczb n");
     scanf("%d",&n);
 }
     while (n<1);
+```
+  petla for   
+```c
     for(i=1; i<=n; i++){
           printf("podaj %d liczbe:",i);
           scanf("%lf",&x);
