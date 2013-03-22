@@ -599,3 +599,14 @@ int main(){
           }
 
 ```
+wersja ze znakami od 32 do 127 - petla sie nie konczy bo 127 to 01111111 jak zwiekszymy o 1 czyli dodamy 0000001 to wyjdzie 1000000 czyli (-128), a to jest mniejsze od 127 i program leci od poczatku
+```c
+#include <stdio.h>
+int main(){
+    char i;
+    for(i=32; i<=127; i++){
+              printf(" %c w ASCII w dec to: %3.0d w hex to: %3.0x \n", i,i,i); 
+           }  
+          getchar(),getchar();
+          }
+```
