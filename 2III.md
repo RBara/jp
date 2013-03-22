@@ -616,10 +616,11 @@ zeby zadzialalo mozna np. zmniejszyc zakres i do 126
 <b>Zad 12</b><br>
 <i>/jest to zadanie nr 7 z kartki nr 1/</i><br>
 <b>Wnapisz pętlę while wypisującą na ekran znaki podane przez uzytkownika, aż do napotkania znaku 'x'</b><br>
+c=getchar(); - pobiera znak z klawiatury
 ```c
 #include <stdio.h>
 int main(){
-    char  c, x;
+    char  c;
    while(c!= 'x'){
               printf(" podaj litere\n"); 
                c=getchar();
