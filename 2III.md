@@ -309,8 +309,8 @@ do
 
 <br>
 <b>Zad 5<br>
-Zbuduj trojkat  - choinke zudowana ze znakow * o zadeklarowanej liczbie wierszy.</b><br> 
-Petla for. 
+Zbuduj trójkat  - choinkę zudowaną ze znaków * o zadeklarowanej liczbie wierszy.</b><br> 
+Pętla for. 
 ```c
 #include <stdio.h>
 #define znak '*' /*znak wypelnienia*/
@@ -338,9 +338,9 @@ int j;
 <br>
 <b>Zad 6 </b><br>
 <i>/jest to zadanie nr 1 z kartki nr 1/</i><br>
-<b>Wyswietl liczby od 0 do 23</b><br>
+<b>Wyświetl liczby od 0 do 23</b><br>
 <br>
-Wersja z petla for.
+Wersja z pętlą for.
 ```c
 #include <stdio.h>
 int main()
@@ -356,7 +356,7 @@ i=0;
 }  
 ```
 
-Wersja z petla while.
+Wersja z pętlą while.
 ```c
 #include <stdio.h>
 int main()
@@ -373,7 +373,7 @@ i=0;
 }
 ```
 
-Wersja z petla do-while.
+Wersja z pętlą do-while.
 ```c
 #include <stdio.h>
 int main()
@@ -393,8 +393,8 @@ do
 <br>
 <b>Zad 7</b><br>
 <i>/jest to zadanie nr 2 z kartki nr 1/</i><br>
-<b>Wypisz liczby od - 3.5 do 7.5 z krokiem co 0.5 za pomoca petli do-while.</b><br>
-Petla do-while. 
+<b>Wypisz liczby od - 3.5 do 7.5 z krokiem co 0.5 za pomocą pętli do-while.</b><br>
+Pętla do-while. 
 ```c
 #include <stdio.h>
 int main()
@@ -414,9 +414,9 @@ do
 <br>
 <b>Zad 8</b><br>
 <i>/jest to zadanie nr 3 z kartki nr 1/</i><br>
-<b>wczytaj n liczb i wyswietl ich sume i srednia arytmetyczna</b><br>
- zapis srednia=suma/(double)n;  oznacza, ze od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa<br>
-wersja z petla while<br>
+<b>Wczytaj n liczb i wyświetl ich sumę i średnią arytmetyczną</b><br>
+ zapis srednia=suma/(double)n;  oznacza, że od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa<br>
+wersja z pętlą while<br>
 ```c
 #include <stdio.h>
 int main(){
@@ -440,15 +440,15 @@ int main(){
           getchar(),getchar();
 }
 ```
-wersja druga z petla do-while<br>
+wersja druga z pętlą do-while<br>
 ```c
 #include <stdio.h>
 int main(){
     int i, n;
     double srednia, suma=0.0, x ;
 ```
-<i>petla do-while
-jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i++</i>
+<i>pętla do-while
+jeżeli n<1 powtórzy pętlę, bo warunek sprawdzany jest na koncu pętli, a potem i++</i>
 ```c
     do{
     printf("podaj ilosc liczb n");
@@ -456,7 +456,7 @@ jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i
 }
     while (n<1);
 ```
-<i>petla for </i>  
+<i>pętla for </i>  
 ```c
     for(i=1; i<=n; i++){
           printf("podaj %d liczbe:",i);
@@ -472,8 +472,8 @@ jeżeli n<1 powtorzy petle, bo warunek sprawdzany jest na koncu petli, a potem i
 <br>
 <b>Zad 9</b><br>
 <i>/jest to zadanie nr 4 z kartki nr 1/</i><br>
-<b>wypisz kwadraty i szesciany liczb naturalnych od 1 do n </b><br>
- petla for<br>
+<b>Wypisz kwadraty i sześciany liczb naturalnych od 1 do n </b><br>
+ pętla for<br>
 ```c
 #include <stdio.h>
 int main(){
@@ -492,7 +492,7 @@ int main(){
 }
 ```
 
-<i>wersja z petla do-while </i>
+<i>wersja z pętlą do-while </i>
 ```c
 #include <stdio.h>
 int main(){
@@ -512,7 +512,7 @@ int main(){
 }
 ```
    
- <i>wersja z petla while </i>  
+ <i>wersja z pętlą while </i>  
 ```c
 #include <stdio.h>
 int main(){
