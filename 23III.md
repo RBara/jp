@@ -31,3 +31,24 @@ d=(b*b)-(4*a*c);
 getchar(), getchar() ;
 }
 ```
+<b>Zad 2<br>
+Znajdź liczby o tej własności, że suma dzielników właściwych liczby jest równa zadanej liczbie, np. 6=1+2+3. Są to tzw. liczby doskonałe.</b>
+```c
+#include <stdio.h>
+#include <math.h>
+int main() {
+int i,s,n;
+for (n=2; n<10000; n++){
+    s=0;
+    for(i=1; i<n; i++){
+         if (n%i==0){
+         s=s+i;
+             }
+    }
+    if(s==n)
+             printf("%d \n" , n);
+}
+getchar(), getchar() ;
+return 0;
+}
+```
