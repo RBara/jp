@@ -77,3 +77,38 @@ int main(){
           return 0;
 }
 ```
+
+```c
+#include <stdio.h>
+#include <math.h>
+int main(){
+    double zero=0.0;
+    double max=-1/zero; 
+    double min=1/zero; 
+    double x;
+    int n, i;
+    printf("podaj ilosc liczb n:");
+    scanf("%d", &n);
+  
+    for(i=1; i<=n; i++){
+    printf("podaj liczbe");
+    scanf("%lf", &x);
+    if (x<max){        
+    printf("najwieksza %5.5lf\n",max);
+    }
+    else { 
+         printf("najwieksza %5.5lf\n",x);
+        max=x;
+         }
+            if (x>min){        
+    printf("najmniejsza %5.5lf\n",min);
+    }
+    else { 
+         printf("najmniejsza %5.5lf\n",x);
+        min=x;
+         }
+          }      
+          getchar(),getchar();
+          return 0;
+}
+```
