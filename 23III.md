@@ -52,3 +52,28 @@ getchar(), getchar() ;
 return 0;
 }
 ```
+<b>Zad 3<br>
+Wyświetl 20 róznych (bez permutacji) trójek pitagorejskich, tzn. takich liczb całkowitych dodatnich a, b, c, że a^2+b^2=c^2</b>
+
+
+```c
+#include <stdio.h>
+#include <math.h>
+int main(){
+    int a,b,c,i;
+    i=1;
+   
+    for(c=1; c<=100; c++){ 
+             for(b=1; b<c; b++)
+                      for(a=1; a<b; a++){
+                               if (a*a+b*b==c*c && i<=20){
+             printf("%d %d %d\n",a,b,c);
+           i++;
+               } 
+             }
+             }
+                  
+          getchar(),getchar();
+          return 0;
+}
+```
