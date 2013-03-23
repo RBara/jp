@@ -1,4 +1,4 @@
-<b> PETLE WARUNKOWE </b><br><br>
+<b> PĘTLE WARUNKOWE </b><br><br>
 <b>
 Zad 1<br>
 Napisz program liczący pierwiastki trójmianu kwadratowego ax^2+bx+c=0</b><br>
