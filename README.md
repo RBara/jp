@@ -771,3 +771,157 @@ int main(){
           return 0;
 }
 ```
+<b>
+Zad 5<br>
+Napisz program wypisujący słownie dzień tygodnia, jeżeli nr dnia tygodnia jest znany jako liczba.</b><br>
+Użycie instrukcji warunkowej <b>switch-case</b>
+```c
+#include <stdio.h>
+int main() {
+int n;
+printf("podaj numer dnia tygodnia, \n");
+scanf("%d" , &n);
+switch (n)
+{
+       case 1:  printf ("poniedzialek");
+       break;
+        case 2 : printf ("wtorek");
+       break; 
+       case 3 :printf ("sroda");
+       break; 
+       case 4 : printf ("czwartek");
+       break; 
+       case 5 : printf ("piatek");
+       break; 
+       case 6 : printf ("sobota");
+       break; 
+       case 7 : printf ("niedziela");
+       break;
+       default: printf ("nie ma takiego dnia tygodnia");
+    break;
+}
+getchar (),getchar ();
+return 0;
+}
+```
+<b> ZADANIA</b><br><br>
+<b>
+Zad 1<br>
+Napisz funkcję obliczająca pole koła</b><br>
+```c
+#include <stdio.h>
+#include <math.h>
+int main() {
+double n=0,s=0;
+printf("podaj promien kuli  r: \n");
+scanf("%lf" , &n);
+       s=4*M_PI*n*n;
+       printf("Powierzchna kuli %lf ", s);
+getchar (),getchar ();
+return 0;
+}
+```
+<b>Zad 2 <br>
+Napisz funkcję wartBezwzgledna zwracającą wartość bezwzględną z liczby całkowitej</b>
+```c
+#include <stdio.h>
+int wartBezwzgledna(int n);
+int main() {
+       int n=0;
+       printf("podaj liczbę calkowita : \n");
+       scanf("%d" , &n);
+       n=wartBezwzgledna (n);
+       printf("Wartosc bezwzgledna %d \n" , n);
+       getchar ();
+       getchar ();
+       return 0;
+}
+int wartBezwzgledna(int n){
+       if (n<=0)
+       n=-n; 
+       return n;
+}
+```
+<b>Zad 3<br>
+Napisz funkcję obliczającą a^n dla n należącego do N za pomocą pętli.</b>
+```c
+#include <stdio.h>
+double potega(double a, int n);
+int main() {
+int n;
+double a, w;
+printf("podaj liczbe a: \a");
+scanf("%lf" , &a);
+printf("do jakiej potegi chcesz podniesc: ");
+scanf("%d" , &n);
+w=potega(a,n);
+printf("Wartosc  a^n=%lf " , w);
+getchar (),getchar ();
+return 0;
+}
+double potega(double a, int n){
+int k=0;
+double iloczyn=1;
+while (k<n) {
+      iloczyn=iloczyn*a;
+k++;
+}
+return iloczyn;
+}
+```
+<b>Zad 4<br>
+Napisz funkcję obliczającą pierw a algorytmem Harona</b>
+```c
+#include <stdio.h>
+#include <math.h>
+double pierw(double a);
+int main (){
+    double a, x, z;
+printf("podaj liczbę a : \n");
+scanf("%lf" , &a);
+x=pierw(a);
+printf(" wartosc pierwiastka %lf", x);  
+for(z=1e-5; z<=1e15; z=z*10){
+            printf("pierw(%lf)=%lf\n",z,pierw(z));  
+            printf("-sqrt(%lf)=%lf\t",z,sqrt(z)); 
+            printf("blad wzgledny=%.15le\n",(pierw(z)-sqrt(z))/sqrt(z)); 
+            }
+getchar();
+getchar();
+return 0;
+}         
+double pierw(double a){
+   double x=1,eps=1e-11 ;   
+  do{
+          x=(x+a/x)*0.5; 
+          }
+          while (fabs(x-a/x)>eps*x);
+          return x; 
+          }
+```
+<b>Zad 5<br>
+Algorytm na a^n zamienić na funkcję</b>
+```c
+#include <stdio.h>
+#include <math.h>
+double pierw(double a);
+int main (){
+    double a,p=1,q;
+    int n,i;
+printf("podaj liczbę a : \n");
+scanf("%lf" , &a);
+printf("podaj liczbę n : \n");
+scanf("%d" , &n);
+   q=a;
+ i=n;
+while(i>0){ 
+if (i%2!=0)p=p*q;
+q=q*q;
+i=i/2;
+}
+printf("a^n=%lf", p);
+getchar();
+getchar();
+return 0;
+}   
+```
