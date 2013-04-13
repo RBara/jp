@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jp : Języki programowania" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jp</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/p0j0/jp">View on GitHub</a>
+
+          <h1 id="project_title">Jp</h1>
+          <h2 id="project_tagline">Języki programowania</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/p0j0/jp/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/p0j0/jp/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>jp</h1>
+
+<p>Języki programowania
+<b>JEZYKI   PROGRAMOWANIA</b><br><br><b>ZAJECIA 1<br><br>
+Zad 1<br>
+Wyswietl sume, różnice, iloczyn i iloraz dwóch liczb calkowitych.<br></b>
+<br><b>Wersja 1</b><br>
+pokaże  błąd przy dzieleniu, bo zadeklarowano liczby calkowite int a,b</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+ <span class="n">b</span><span class="o">=</span><span class="mi">7</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d*%d=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d/%d=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d+%d=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d-%d=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 2</b><br>
+pokaże wszystkie odpwiedzi jako zmiennoprzecinkowe np. 21.000000, bo zadeklarowano zmiennoprzecinkowe double a,b</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+ <span class="n">b</span><span class="o">=</span><span class="mi">7</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf*%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf/%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf+%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf-%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 3</b><br>
+pokaże sumę, różnicę, iloczyn jako liczby całkowite /zmiennoprzecinkowe ale z zerem miejsc po przecinku, <br>a dzielenie z miejscami po przecinku.</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+ <span class="n">b</span><span class="o">=</span><span class="mi">7</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%.0lf*%.0lf=%.0lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf/%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%.0lf+%.0lf=%.0lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%.0lf-%.0lf=%.0lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b><br>Zad 2<br>
+Oblicz obwód kola o promieniu r<br><br>
+Wersja 1</b><br>
+z dolaczona #include , żeby liczylo pi /jako M_PI/, czyli podstawi samodzielnie wartosć pi<br>
+Poda wartosc obwodu kola wraz z obliczeniami </p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">r</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj promień okręgu %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+ <span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d*%lf*%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 2</b><br>
+z dolaczeniem #include <br>
+Poda wartosci obwodu i pola kola wraz z obliczeniami</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">r</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj promień okręgu r %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+ <span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d*%lf*%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf*%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 3</b><br>
+z dolaczeniem #include <br>
+Poda wartosci obwodu i pola kola wraz z obliczeniami i tekstem</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">r</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj promień okręgu r %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+ <span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d*%lf*%lf=%lf Obwod kola</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf*%lf=%lf Pole kola</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">getchar</span><span class="p">();</span>
+
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 4</b><br>
+z dolaczeniem #include <br>
+Poda wartosci obwodu i pola kola wraz z obliczeniami i tekstem wyswietlonym przy zastosowaniu puts <br>i podwójnego getchar do przechodzenia dalej enterem</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">r</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj promień okręgu r %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+ <span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+  <span class="n">puts</span><span class="p">(</span><span class="s">"Obwod kola"</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%d*%lf*%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">puts</span><span class="p">(</span><span class="s">"Pole kola"</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"%lf*%lf=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">M_PI</span><span class="p">,</span> <span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 5</b><br> 
+z dolaczeniem #include <br>
+Poda wartosci obwodu i pola kola bez widocznych obliczen, tylko wynik i tekst</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">r</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj promień okręgu r %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+ <span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"Obwod kola %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"Pole kola %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 6</b><br>
+z dolaczeniem #include <br>
+Poda wartosci obwodu i pola kola bez widocznych obliczen, <br>tylko wynik i opis wraz z podaniem dla jakiego promienia r</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+ <span class="kt">double</span> <span class="n">r</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+ <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj promień okręgu r %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+ <span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"Obwod kola o promieniu %lf wynosi %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="n">printf</span> <span class="p">(</span><span class="s">"Pole kola o promieniu %lf wynosi %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">M_PI</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span>
+
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 3<br>
+Przelicz  F na C<br><br>
+Wersja 1</b><br>
+Zastosowanie while,<br> 
+Zamieni F na C w zakresie od 0F do 300F z krokiem 20F int czyli tylko wartosci cakowite</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+<span class="kt">int</span> <span class="n">fahr</span><span class="p">,</span> <span class="n">celsius</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="n">step</span><span class="p">;</span>
+<span class="n">lower</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">upper</span><span class="o">=</span><span class="mi">300</span><span class="p">;</span>
+<span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+<span class="n">fahr</span><span class="o">=</span><span class="n">lower</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">fahr</span><span class="o">&lt;=</span><span class="n">upper</span><span class="p">){</span>
+      <span class="n">celsius</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">fahr</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span><span class="o">/</span><span class="mi">9</span><span class="p">;</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\t</span><span class="s"> %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fahr</span><span class="p">,</span> <span class="n">celsius</span><span class="p">);</span>
+      <span class="n">fahr</span><span class="o">=</span><span class="n">fahr</span><span class="o">+</span><span class="n">step</span><span class="p">;</span>
+                     <span class="p">}</span>
+ <span class="n">getchar</span><span class="p">();</span>
+
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 2</b><br>
+Zastosowanie while,<br> 
+Zamieni stopnie F na C od 0F do 50F ale wynik z dokladnocia do jednego miejsca po przecinku, <br>czyli używamy zmiennoprzecinkowych - zamieniamy int na double i %d na %lf</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+<span class="kt">double</span> <span class="n">fahr</span><span class="p">,</span> <span class="n">celsius</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="n">step</span><span class="p">;</span>
+<span class="n">lower</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">upper</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+<span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">fahr</span><span class="o">=</span><span class="n">lower</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">fahr</span><span class="o">&lt;=</span><span class="n">upper</span><span class="p">){</span>
+      <span class="n">celsius</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">fahr</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span><span class="o">/</span><span class="mi">9</span><span class="p">;</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%.1lf</span><span class="se">\t</span><span class="s"> %.1lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fahr</span><span class="p">,</span> <span class="n">celsius</span><span class="p">);</span>
+      <span class="n">fahr</span><span class="o">=</span><span class="n">fahr</span><span class="o">+</span><span class="n">step</span><span class="p">;</span>
+                     <span class="p">}</span>
+ <span class="n">getchar</span><span class="p">();</span>
+
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 3</b><br>
+Zastosowanie while,<br> 
+To samo co Wersja 2, ale ladnie wyswietli wyniki przecinkami jeden pod drugim</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+<span class="kt">double</span> <span class="n">fahr</span><span class="p">,</span> <span class="n">celsius</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">,</span> <span class="n">step</span><span class="p">;</span>
+<span class="n">lower</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">upper</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+<span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">fahr</span><span class="o">=</span><span class="n">lower</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">fahr</span><span class="o">&lt;=</span><span class="n">upper</span><span class="p">){</span>
+      <span class="n">celsius</span><span class="o">=</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="n">fahr</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span><span class="o">/</span><span class="mi">9</span><span class="p">;</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%5.1lf</span><span class="se">\t</span><span class="s"> %7.1lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fahr</span><span class="p">,</span> <span class="n">celsius</span><span class="p">);</span>
+      <span class="n">fahr</span><span class="o">=</span><span class="n">fahr</span><span class="o">+</span><span class="n">step</span><span class="p">;</span>
+                     <span class="p">}</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Wersja 4</b><br>
+Zastosowanie for , #define LOWER 0 itd<br> 
+Jak w Wersji 1, ale przy #define STEP 0 daje niekonczaca sie petle <br>
+wywietlac bedzie zera w nieskonczonosc i żeby wyjsc to wcisnac ctrl+c<br> 
+Zmiana STEP na np. 20 da normalna petle<br> 
+i zamieni F na C w zakresie od 0F do 300F z krokiem 20F </p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#define LOWER 0</span>
+<span class="cp">#define UPPER 300</span>
+<span class="cp">#define STEP 0</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+<span class="kt">int</span> <span class="n">fahr</span><span class="p">,</span> <span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="n">fahr</span><span class="o">=</span><span class="n">LOWER</span><span class="p">;</span> <span class="n">fahr</span><span class="o">&lt;=</span><span class="n">UPPER</span><span class="p">;</span> <span class="n">fahr</span><span class="o">=</span><span class="n">fahr</span><span class="o">+</span><span class="n">STEP</span><span class="p">)</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"%3d %6.1lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">fahr</span><span class="p">,(</span><span class="mf">5.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fahr</span><span class="o">-</span><span class="mf">32.0</span><span class="p">));</span>
+ <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 4<br>
+Oblicz n-ty wyraz (Un) ciagu Fibonacciego.</b><br><br>
+Petla do-while <br></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">;</span><span class="cm">/*na kolejne wyrazy ciągu*/</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>  <span class="cm">/*nr wyrazu*/</span>
+<span class="kt">int</span> <span class="n">i</span><span class="p">;</span> <span class="cm">/*licznik*/</span>
+<span class="k">do</span>
+  <span class="p">{</span> <span class="n">printf</span> <span class="p">(</span><span class="s">"podaj numer wyrazu (co najmniej 3): "</span><span class="p">);</span>
+   <span class="n">scanf</span> <span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">);</span>
+  <span class="n">u2</span><span class="o">=</span><span class="n">u1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="cm">/*dwa pierwsze wyrazy*/</span>
+  <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">++</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="cm">/*dziala tylko dla n&gt;2 i++ najpierw sdprawdza i z n potem zwieksz o jeden*/</span>
+   <span class="p">{</span><span class="n">u3</span><span class="o">=</span><span class="n">u1</span><span class="o">+</span><span class="n">u2</span><span class="p">;</span>
+    <span class="n">u1</span><span class="o">=</span><span class="n">u2</span><span class="p">;</span>
+    <span class="n">u2</span><span class="o">=</span><span class="n">u3</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="cm">/*inna możliwość*/</span>
+   <span class="cm">/*for (i=3; i&lt;=2; i++, u1=u2, u2=u3) u3=u1+u2; */</span>
+   <span class="n">printf</span> <span class="p">(</span><span class="s">"Wyraz o numerze %d ma wartość %d"</span> <span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">u3</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span> <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 5<br>
+Zbuduj trójkat  - choinkę zudowaną ze znaków * o zadeklarowanej liczbie wierszy.</b><br> 
+Pętla for. </p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#define znak '*' </span><span class="cm">/*znak wypelnienia*/</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">lbwier</span><span class="p">;</span><span class="cm">/*calkowita liczba wierszy*/</span>
+<span class="kt">int</span> <span class="n">lw</span><span class="p">;</span>  <span class="cm">/*licznik wierszy*/</span>
+<span class="kt">int</span> <span class="n">lodst</span><span class="p">;</span> <span class="cm">/*liczba odstepow poprzedzajacych gwiazdke*/</span>
+<span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
+
+  <span class="n">printf</span> <span class="p">(</span><span class="s">"ile wierszy? "</span><span class="p">);</span>
+   <span class="n">scanf</span> <span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lbwier</span><span class="p">);</span>
+
+   <span class="k">for</span> <span class="p">(</span><span class="n">lw</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">lw</span><span class="o">&lt;</span><span class="n">lbwier</span> <span class="p">;</span> <span class="n">lw</span><span class="o">++</span><span class="p">)</span>
+   <span class="p">{</span> <span class="n">lodst</span> <span class="o">=</span> <span class="n">lbwier</span><span class="o">-</span><span class="n">lw</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+     <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">lodst</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="n">putchar</span> <span class="p">(</span><span class="sc">' '</span><span class="p">);</span> <span class="cm">/* putchar-wstaw (' ')-puste miejsce*/</span>
+     <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">*</span><span class="n">lw</span><span class="o">+</span><span class="mi">1</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="n">putchar</span> <span class="p">(</span><span class="n">znak</span><span class="p">);</span> <span class="cm">/* (znak)-wstaw * */</span>
+     <span class="n">putchar</span><span class="p">(</span><span class="sc">'\n'</span><span class="p">);</span>
+   <span class="p">}</span>
+ <span class="n">getchar</span><span class="p">();</span> <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 6 </b><br><i>/jest to zadanie nr 1 z kartki nr 1/</i><br><b>Wyświetl liczby od 0 do 23</b><br><br>
+Wersja z pętlą for.</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+ <span class="k">for</span><span class="p">(</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">24</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+ <span class="p">{</span>
+    <span class="n">printf</span> <span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+ <span class="p">}</span>
+ <span class="n">getchar</span><span class="p">();</span> <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>  
+</pre></div>
+
+<p>Wersja z pętlą while.</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+ <span class="k">while</span><span class="p">(</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">24</span><span class="p">)</span>
+ <span class="p">{</span>
+      <span class="n">printf</span> <span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+      <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="n">getchar</span><span class="p">();</span> <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Wersja z pętlą do-while.</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">i</span><span class="p">,;</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">do</span>
+  <span class="p">{</span> <span class="n">printf</span> <span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+  <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">24</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span> <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
+</pre></div>
+
+<p><br><b>Zad 7</b><br><i>/jest to zadanie nr 2 z kartki nr 1/</i><br><b>Wypisz liczby od - 3.5 do 7.5 z krokiem co 0.5 za pomocą pętli do-while.</b><br>
+Pętla do-while. </p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">double</span> <span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+<span class="n">i</span><span class="o">=-</span><span class="mf">3.5</span><span class="p">;</span>
+<span class="n">n</span><span class="o">=</span><span class="mf">7.5</span><span class="p">;</span>
+<span class="k">do</span>
+  <span class="p">{</span> <span class="n">printf</span> <span class="p">(</span><span class="s">"%.1lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+  <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mf">0.5</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">);</span>
+ <span class="n">getchar</span><span class="p">();</span> <span class="n">getchar</span><span class="p">();</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span> 
+</pre></div>
+
+<p><br><b>Zad 8</b><br><i>/jest to zadanie nr 3 z kartki nr 1/</i><br><b>Wczytaj n liczb i wyświetl ich sumę i średnią arytmetyczną</b><br>
+ zapis srednia=suma/(double)n;  oznacza, że od tego miejsca liczba n jest traktowana jako zmiennoprzecinkowa<br>
+wersja z pętlą while<br></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="p">,</span> <span class="n">suma</span><span class="p">,</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">srednia</span><span class="p">;</span>
+    <span class="n">suma</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">"podaj ilosc liczb n"</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbe"</span><span class="p">);</span>
+          <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+          <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+          <span class="n">suma</span><span class="o">=</span><span class="n">suma</span><span class="o">+</span><span class="n">x</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="n">puts</span><span class="p">(</span><span class="s">"suma"</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">suma</span><span class="p">);</span>
+          <span class="n">srednia</span><span class="o">=</span><span class="n">suma</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">n</span><span class="p">;</span>
+          <span class="n">puts</span><span class="p">(</span><span class="s">"srednia"</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"%.2lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">srednia</span><span class="p">);</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>wersja druga z pętlą do-while<br></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">srednia</span><span class="p">,</span> <span class="n">suma</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">x</span> <span class="p">;</span>
+</pre></div>
+
+<p><i>pętla do-while
+jeżeli n</i></p>
+
+<div class="highlight"><pre>    <span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"podaj ilosc liczb n"</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+
+<p><i>pętla for </i>  </p>
+
+<div class="highlight"><pre>    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"podaj %d liczbe:"</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+          <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+          <span class="n">suma</span><span class="o">=</span><span class="n">suma</span><span class="o">+</span><span class="n">x</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="n">srednia</span><span class="o">=</span><span class="n">suma</span><span class="o">/</span><span class="n">n</span><span class="p">;</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"suma podanych %d liczb wynosi: %.3lf"</span><span class="p">,</span><span class="n">n</span><span class="p">,</span> <span class="n">suma</span><span class="p">);</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"srednia wynosi: %.3lf"</span><span class="p">,</span><span class="n">srednia</span><span class="p">);</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 9</b><br><i>/jest to zadanie nr 4 z kartki nr 1/</i><br><b>Wypisz kwadraty i sześciany liczb naturalnych od 1 do n </b><br>
+ pętla for<br></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbe n: "</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">"liczba </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\t</span><span class="s"> kwadrat </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\t</span><span class="s"> szescian </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span>
+          <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="p">);</span>
+          <span class="p">}</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><i>wersja z pętlą do-while </i></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbe n: "</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"liczba </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\t</span><span class="s"> kwadrat </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\t</span><span class="s"> szescian </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span>
+          <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="p">);</span>
+          <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+          <span class="p">}</span>          
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">);</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><i>wersja z pętlą while </i>  </p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">do</span><span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbe n: "</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"liczba </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\t</span><span class="s"> kwadrat </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\t</span><span class="s"> szescian </span><span class="se">\t</span><span class="s"> %d </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span>
+          <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="p">);</span>
+          <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+          <span class="p">}</span>          
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 10</b><br><i>/jest to zadanie nr 5 z kartki nr 1/</i><br><b>Oblicz za pomocą pętli for i while sume kwadratow liczb  od 3 do 15 </b><br>
+x - oznacza sume kwadratow<br>
+petla for</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">15</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+             <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">);</span>  
+           <span class="p">}</span>
+           <span class="n">printf</span><span class="p">(</span><span class="s">" %d </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>petla while</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">15</span><span class="p">){</span>
+             <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">);</span> 
+             <span class="n">i</span><span class="o">++</span><span class="p">;</span> 
+           <span class="p">}</span>
+           <span class="n">printf</span><span class="p">(</span><span class="s">" %d </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 11</b><br><i>/jest to zadanie nr 6 z kartki nr 1/</i><br><b>Wypisz sin i cos katow 0-180 stopni z krokiem co 30 stopni za pomoca petli for </b><br></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">double</span>  <span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">180</span><span class="p">;</span> <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">30</span><span class="p">){</span>
+             <span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">*</span><span class="n">M_PI</span><span class="p">;</span>
+              <span class="n">printf</span><span class="p">(</span><span class="s">" kat %4.0lf stopni </span><span class="se">\t</span><span class="s">  sin %5.2lf  </span><span class="se">\t</span><span class="s"> cos %5.2lf</span><span class="se">\n</span><span class="s"> "</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">);</span> 
+           <span class="p">}</span>  
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+          <span class="p">}</span>
+</pre></div>
+
+<p><br><b>Zad 12</b><br><i>/jest to zadanie nr 7 z kartki nr 1/</i><br><b>Wypisz znaki od 'a' do 'k' wraz z ich kodem ASCII dziesietnie dec i szesnastkowo hex w kolejnosci rosnacej i malejacej</b><br>
+char - znak
+%c - znak
+%d - kod ASCII dec
+%x - kod ASCII hex
+rosnaco</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">char</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="sc">'a'</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="sc">'k'</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+              <span class="n">printf</span><span class="p">(</span><span class="s">" %c w ASCII w dec to: %3.0d w hex to: %3.0x </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">);</span> 
+           <span class="p">}</span>  
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+          <span class="p">}</span>
+
+</pre></div>
+
+<p>wersja ze znakami od 32 do 127 - petla sie nie konczy bo 127 to 01111111 jak zwiekszymy o 1 czyli dodamy 0000001 to wyjdzie 1000000 czyli (-128), a to jest mniejsze od 127 i program leci od poczatku</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">char</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">32</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">127</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+              <span class="n">printf</span><span class="p">(</span><span class="s">" %c w ASCII w dec to: %3.0d w hex to: %3.0x </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">);</span> 
+           <span class="p">}</span>  
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+          <span class="p">}</span>
+</pre></div>
+
+<p>zeby zadzialalo mozna np. zmniejszyc zakres i do 126</p>
+
+<p><br><b>Zad 12</b><br><i>/jest to zadanie nr 7 z kartki nr 1/</i><br><b>Wnapisz pętlę while wypisującą na ekran znaki podane przez uzytkownika, aż do napotkania znaku 'x'</b><br>
+c=getchar(); - pobiera znak z klawiatury</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">char</span>  <span class="n">c</span><span class="p">;</span>
+   <span class="k">while</span><span class="p">(</span><span class="n">c</span><span class="o">!=</span> <span class="sc">'x'</span><span class="p">){</span>
+              <span class="n">printf</span><span class="p">(</span><span class="s">" podaj litere</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span> 
+               <span class="n">c</span><span class="o">=</span><span class="n">getchar</span><span class="p">();</span>
+               <span class="n">getchar</span><span class="p">();</span>
+           <span class="p">}</span>  
+          <span class="n">getchar</span><span class="p">();</span>
+          <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+          <span class="p">}</span>
+</pre></div>
+
+<p>można też tak:</p>
+
+<div class="highlight"><pre><span class="k">while</span><span class="p">((</span><span class="n">c</span><span class="o">=</span><span class="n">getchar</span><span class="p">())</span><span class="o">!=</span> <span class="sc">'x'</span><span class="p">)</span>
+</pre></div>
+
+<p><br><b>Zad 12</b><br><i>/jest to zadanie nr 7 z kartki nr 1/</i><br><b>Napisz program wyświetlający tabliczkę mnożenia do 13 - użyj pętli</b><br>
+} putchar('\n'); - to oznacza żeby po wykonaniu pętli zagnieżdżonej pszeszedł do następnej linijki<br>
+pętla for wewnątrz pętli for daje mnożenie wierszami i przeskok o jeden wiersz</p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">13</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> 
+             <span class="k">for</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">13</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">){</span>
+             <span class="n">printf</span><span class="p">(</span><span class="s">"%4d"</span><span class="p">,</span><span class="n">i</span><span class="o">*</span><span class="n">n</span><span class="p">);</span>
+             <span class="p">}</span> <span class="n">putchar</span><span class="p">(</span><span class="sc">'\n'</span><span class="p">);</span>
+             <span class="p">}</span>
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b> PĘTLE WARUNKOWE </b><br><br><b>
+Zad 1<br>
+Napisz program liczący pierwiastki trójmianu kwadratowego ax^2+bx+c=0</b><br>
+pętla while dla pozbycia się przypadku a=0, czyli braku trójmianu kwadratowego </p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="kt">double</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">x</span> <span class="p">,</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj wspolczyniki trojmianu kwadratowego  ax^2+bx+c, </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%lf %lf %lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj a rozne od zera, </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span> <span class="p">(</span><span class="s">"%lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">d</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+    <span class="n">x1</span><span class="o">=</span><span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">x2</span><span class="o">=</span><span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"pierwiastek  x1 = %lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"pierwiastek  x2 = %lf"</span><span class="p">,</span> <span class="n">x2</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"pierwiastek  x1=x2= %lf"</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> 
+        <span class="n">printf</span><span class="p">(</span><span class="s">"brak pierwiastkow rzeczywistych"</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="n">getchar</span><span class="p">(),</span> <span class="n">getchar</span><span class="p">()</span> <span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Zad 2<br>
+Znajdź liczby o tej własności, że suma dzielników właściwych liczby jest równa zadanej liczbie, np. 6=1+2+3. Są to tzw. liczby doskonałe.</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">10000</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+         <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">+</span><span class="n">i</span><span class="p">;</span>
+             <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="o">==</span><span class="n">n</span><span class="p">)</span>
+             <span class="n">printf</span><span class="p">(</span><span class="s">"%d </span><span class="se">\n</span><span class="s">"</span> <span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">getchar</span><span class="p">(),</span> <span class="n">getchar</span><span class="p">()</span> <span class="p">;</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Zad 3<br>
+Wyświetl 20 róznych (bez permutacji) trójek pitagorejskich, tzn. takich liczb całkowitych dodatnich a, b, c, że a^2+b^2=c^2</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">i</span><span class="p">;</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">c</span><span class="o">&lt;=</span><span class="mi">100</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">){</span> 
+             <span class="k">for</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">b</span><span class="o">&lt;</span><span class="n">c</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span>
+                      <span class="k">for</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">){</span>
+                               <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">==</span><span class="n">c</span><span class="o">*</span><span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="p">){</span>
+             <span class="n">printf</span><span class="p">(</span><span class="s">"%d %d %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+           <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+               <span class="p">}</span> 
+             <span class="p">}</span>
+             <span class="p">}</span>
+
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+          <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">double</span> <span class="n">zero</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">max</span><span class="o">=-</span><span class="mi">1</span><span class="o">/</span><span class="n">zero</span><span class="p">;</span> 
+    <span class="kt">double</span> <span class="n">min</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">zero</span><span class="p">;</span> 
+    <span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"podaj ilosc liczb n:"</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbe"</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">max</span><span class="p">){</span>        
+    <span class="n">printf</span><span class="p">(</span><span class="s">"najwieksza %5.5lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">max</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span> 
+         <span class="n">printf</span><span class="p">(</span><span class="s">"najwieksza %5.5lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+        <span class="n">max</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+         <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">min</span><span class="p">){</span>        
+    <span class="n">printf</span><span class="p">(</span><span class="s">"najmniejsza %5.5lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">min</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span> 
+         <span class="n">printf</span><span class="p">(</span><span class="s">"najmniejsza %5.5lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+        <span class="n">min</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+         <span class="p">}</span>
+          <span class="p">}</span>      
+          <span class="n">getchar</span><span class="p">(),</span><span class="n">getchar</span><span class="p">();</span>
+          <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>
+Zad 5<br>
+Napisz program wypisujący słownie dzień tygodnia, jeżeli nr dnia tygodnia jest znany jako liczba.</b><br>
+Użycie instrukcji warunkowej <b>switch-case</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj numer dnia tygodnia, </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="k">switch</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+       <span class="k">case</span> <span class="mi">1</span>:  <span class="n">printf</span> <span class="p">(</span><span class="s">"poniedzialek"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">2</span> : <span class="n">printf</span> <span class="p">(</span><span class="s">"wtorek"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span> 
+       <span class="k">case</span> <span class="mi">3</span> :<span class="n">printf</span> <span class="p">(</span><span class="s">"sroda"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span> 
+       <span class="k">case</span> <span class="mi">4</span> : <span class="n">printf</span> <span class="p">(</span><span class="s">"czwartek"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span> 
+       <span class="k">case</span> <span class="mi">5</span> : <span class="n">printf</span> <span class="p">(</span><span class="s">"piatek"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span> 
+       <span class="k">case</span> <span class="mi">6</span> : <span class="n">printf</span> <span class="p">(</span><span class="s">"sobota"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span> 
+       <span class="k">case</span> <span class="mi">7</span> : <span class="n">printf</span> <span class="p">(</span><span class="s">"niedziela"</span><span class="p">);</span>
+       <span class="k">break</span><span class="p">;</span>
+       <span class="nl">default:</span> <span class="n">printf</span> <span class="p">(</span><span class="s">"nie ma takiego dnia tygodnia"</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">getchar</span> <span class="p">(),</span><span class="n">getchar</span> <span class="p">();</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b> ZADANIA</b><br><br><b>
+Zad 1<br>
+Napisz funkcję obliczająca pole koła</b><br></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="kt">double</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj promien kuli  r: </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+       <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">;</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">"Powierzchna kuli %lf "</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+<span class="n">getchar</span> <span class="p">(),</span><span class="n">getchar</span> <span class="p">();</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Zad 2 <br>
+Napisz funkcję wartBezwzgledna zwracającą wartość bezwzględną z liczby całkowitej</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">wartBezwzgledna</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+       <span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbę calkowita : </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+       <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+       <span class="n">n</span><span class="o">=</span><span class="n">wartBezwzgledna</span> <span class="p">(</span><span class="n">n</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">"Wartosc bezwzgledna %d </span><span class="se">\n</span><span class="s">"</span> <span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+       <span class="n">getchar</span> <span class="p">();</span>
+       <span class="n">getchar</span> <span class="p">();</span>
+       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">wartBezwzgledna</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span>
+       <span class="n">n</span><span class="o">=-</span><span class="n">n</span><span class="p">;</span> 
+       <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Zad 3<br>
+Napisz funkcję obliczającą a^n dla n należącego do N za pomocą pętli.</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">double</span> <span class="nf">potega</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbe a: </span><span class="se">\a</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"do jakiej potegi chcesz podniesc: "</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="n">w</span><span class="o">=</span><span class="n">potega</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">n</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Wartosc  a^n=%lf "</span> <span class="p">,</span> <span class="n">w</span><span class="p">);</span>
+<span class="n">getchar</span> <span class="p">(),</span><span class="n">getchar</span> <span class="p">();</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">double</span> <span class="nf">potega</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+<span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">iloczyn</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">k</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">iloczyn</span><span class="o">=</span><span class="n">iloczyn</span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+<span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">iloczyn</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><b>Zad 4<br>
+Napisz funkcję obliczającą pierw a algorytmem Harona</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">pierw</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbę a : </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">x</span><span class="o">=</span><span class="n">pierw</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">" wartosc pierwiastka %lf"</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  
+<span class="k">for</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">;</span> <span class="n">z</span><span class="o">&lt;=</span><span class="mf">1e15</span><span class="p">;</span> <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="o">*</span><span class="mi">10</span><span class="p">){</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"pierw(%lf)=%lf</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">pierw</span><span class="p">(</span><span class="n">z</span><span class="p">));</span>  
+            <span class="n">printf</span><span class="p">(</span><span class="s">"-sqrt(%lf)=%lf</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z</span><span class="p">));</span> 
+            <span class="n">printf</span><span class="p">(</span><span class="s">"blad wzgledny=%.15le</span><span class="se">\n</span><span class="s">"</span><span class="p">,(</span><span class="n">pierw</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z</span><span class="p">));</span> 
+            <span class="p">}</span>
+<span class="n">getchar</span><span class="p">();</span>
+<span class="n">getchar</span><span class="p">();</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>         
+<span class="kt">double</span> <span class="nf">pierw</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">){</span>
+   <span class="kt">double</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">eps</span><span class="o">=</span><span class="mf">1e-11</span> <span class="p">;</span>   
+  <span class="k">do</span><span class="p">{</span>
+          <span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">a</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="p">;</span> 
+          <span class="p">}</span>
+          <span class="k">while</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">a</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span><span class="n">eps</span><span class="o">*</span><span class="n">x</span><span class="p">);</span>
+          <span class="k">return</span> <span class="n">x</span><span class="p">;</span> 
+          <span class="p">}</span>
+</pre></div>
+
+<p><b>Zad 5<br>
+Algorytm na a^n zamienić na funkcję</b></p>
+
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="nf">pierw</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">q</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">i</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbę a : </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"podaj liczbę n : </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span> <span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+   <span class="n">q</span><span class="o">=</span><span class="n">a</span><span class="p">;</span>
+ <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span> 
+<span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">*</span><span class="n">q</span><span class="p">;</span>
+<span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="o">*</span><span class="n">q</span><span class="p">;</span>
+<span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"a^n=%lf"</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span>
+<span class="n">getchar</span><span class="p">();</span>
+<span class="n">getchar</span><span class="p">();</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>   
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jp maintained by <a href="https://github.com/p0j0">p0j0</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
