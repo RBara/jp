@@ -2,8 +2,8 @@ jp
 ==
 
 Języki programowania
-<b>JEZYKI   PROGRAMOWANIA</b><br><br>
-<b>ZAJECIA 1<br><br>
+<b>JEZYK   PROGRAMOWANIA C</b><br><br>
+<b> [ZAJECIA 1](https://github.com/p0j0/jp/blob/master/2III.md)<br><br>
 Zad 1<br>
 Wyswietl sume, różnice, iloczyn i iloraz dwóch liczb calkowitych.<br></b>
 <br>
