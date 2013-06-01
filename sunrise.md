@@ -1,4 +1,4 @@
-Obliczanie azymutu wschodu Slonca
+Obliczanie azymutu wschodu Slońca dla dowolnej szerokoci geograficznej i dnia.
 
 ```c
 #include <stdio.h>
