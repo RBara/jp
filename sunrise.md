@@ -25,7 +25,7 @@ Po poprawkach. Dzień podawany w normalnej notacji dd m rrrr. Azymut astronomicz
 #include <math.h>
 int main(){
     int i=0,dd=0, mm=0, m=0, rr=0,r=0, rrr=0;
-    double  b=0, x=0, y=0, a=0, n=0, g=0;
+    double  b=0, x=0, y=0, a=0, n=0;
     printf ("podaj szerokosc geograficzna w stopniach w przypadku S ze znakiem minus %lf\n", y);
     scanf ("%lf", &y);
     printf ("podaj date dd m rrrr oddzielona spacjami  %d\t %d\t %d\n", dd, mm, rr);
@@ -66,10 +66,8 @@ int main(){
              b=(23.45*sin(((i-80)*360/365)*M_PI/180))*M_PI/180;/* deklinacja Slonca*/
              a=acos((-(cos(x)*sin(b)))+((sin(x)*cos(b))*(-(tan(x)*tan(b)))));/*azymut wschodu Slonca w radianach*/
              n=a*180/M_PI;/*azymut astronomiczny w stopniach*/
-             g=360-n;/*azymut geograficzny*/
-             printf(" Azymut wschodu Slonca:\n");
-             printf(" astronomiczny /liczony w lewo od kierunku S/  =  %5.2lf\n ", n); 
-             printf("geograficzny /liczony w prawo od kierunku N/  = %5.2lf\n ", g); 
+             printf(" Azymut wschodu Slonca =  %5.2lf\n ", n);
+           
           getchar(),getchar();
           }
 ```
