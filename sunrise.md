@@ -25,7 +25,7 @@ Po poprawkach. Dzień podawany w normalnej notacji dd m rrrr. Azymut astronomicz
 #include <math.h>
 int main(){
     int i=0,dd=0, mm=0, m=0, rr=0,r=0, rrr=0;
-    double  b=0, x=0, y=0, a=0, n=0;
+    double  b=0, x=0, y=0, a=0, n=0, g=0;
     printf ("podaj szerokosc geograficzna w stopniach w przypadku S ze znakiem minus %lf\n", y);
     scanf ("%lf", &y);
     printf ("podaj date dd m rrrr oddzielona spacjami  %d\t %d\t %d\n", dd, mm, rr);
@@ -38,23 +38,23 @@ int main(){
                break; 
                case 3 : m=59;
                break; 
-               case 4 : m==90;
+               case 4 : m=90;
                break; 
-               case 5 : m==120;
+               case 5 : m=120;
                break; 
-               case 6 : m==151;
+               case 6 : m=151;
                break; 
-               case 7 : m==181;
+               case 7 : m=181;
                break; 
-               case 8 : m==212;
+               case 8 : m=212;
                break; 
-               case 9 : m==243;
+               case 9 : m=243;
                break; 
-               case 10 : m==273;
+               case 10 : m=273;
                break; 
-               case 11 : m==304;
+               case 11 : m=304;
                break; 
-               case 12 : m==334;
+               case 12 : m=334;
                break;
            }
           if (rr%4==r)/*sprawdzenie przestepnosci roku*/
@@ -66,8 +66,10 @@ int main(){
              b=(23.45*sin(((i-80)*360/365)*M_PI/180))*M_PI/180;/* deklinacja Slonca*/
              a=acos((-(cos(x)*sin(b)))+((sin(x)*cos(b))*(-(tan(x)*tan(b)))));/*azymut wschodu Slonca w radianach*/
              n=a*180/M_PI;/*azymut astronomiczny w stopniach*/
-             printf(" Azymut wschodu Slonca =  %5.2lf\n ", n);
-           
+             g=180-n;/*azymut geograficzny*/
+             printf(" Azymut wschodu Slonca:\n");
+             printf(" astronomiczny /liczony w lewo od kierunku S/  =  %6.2lf\n ", n); 
+             printf("geograficzny /liczony w prawo od kierunku N/  =  %6.2lf\n ", g); 
           getchar(),getchar();
           }
 ```
