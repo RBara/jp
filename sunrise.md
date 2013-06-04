@@ -140,9 +140,9 @@ int main(){
              printf(" Azymut wschodu Slonca:\n");
              printf(" astronomiczny /liczony w lewo od kierunku S/  =  %6.2lf\n ", n); 
              printf("geograficzny /liczony w prawo od kierunku N/  =  %6.2lf\n ", g); 
-                             printf("a  =  %6.2lf\n ", a); 
-                              printf("deklinacja  =  %6.2lf\n ", b); 
-                              printf("an = %6.2lf\n", an);   /* do sprawdzenia popawności wyników   */
+                            /*  printf("a  =  %6.2lf\n ", a); do sprawdzenia popawności wyników   */
+                             /*  printf("deklinacja  =  %6.2lf\n ", b); do sprawdzenia popawności wyników   */
+                             /*  printf("an = %6.2lf\n", an);    do sprawdzenia popawności wyników   */
               }
           getchar(),getchar();
           }
